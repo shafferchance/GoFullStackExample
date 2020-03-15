@@ -1,14 +1,14 @@
 # Go Server
 &nbsp;&nbsp;Simply connects to MongoDB and holds the connection context. Holds endpoints that can push and pull data from the mongodb database.
 ## Endpoints
-    - /
-        - GET
-            - Able to parse URL and determine which static file to send. There is a special clause handling set-up for the root case to keep from sending wrong html file, but in theory this allows breaking away from the index.html convention if one desired to do so
-    - /input
-        - GET
-            - Will retrieve all entries from the `new_db` of `text` collection  
-        - POST
-            - Will add entry to `new_db` of type `text` collection
+- /
+    - GET
+        - Able to parse URL and determine which static file to send. There is a special clause handling set-up for the root case to keep from sending wrong html file, but in theory this allows breaking away from the index.html convention if one desired to do so
+- /input
+    - GET
+        - Will retrieve all entries from the `new_db` of `text` collection  
+    - POST
+        - Will add entry to `new_db` of type `text` collection
 ## Notes
 &nbsp;&nbsp;While making this it was discovered that go uses structs to interact with the database. Thus these functions are able to generized, but with much more difficulty due to having to initialize custom structs. However this is workable.<br>
 &nbsp;&nbsp;In addition, sending JSON is much more difficult as there is no string templating without an import, creating some difficulty with readability that can be conquored with a some understanding of string concatenation.<br>
