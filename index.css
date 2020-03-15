@@ -1,0 +1,14 @@
+.refresh {
+    border: 1px solid lightgray;
+    background-color: rgb(204, 204, 204);
+}
+
+.refresh:hover {
+    text-shadow: 1px 1px 5px black;
+    cursor: pointer;
+}
+
+.refresh:hover::after {
+    transition: 750ms;
+    content: '↓';
+}
